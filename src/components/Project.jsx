@@ -37,6 +37,7 @@ const Project = ({
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
       {isHidden && (
         <ProjectDetails
+          key={title}
           title={title}
           description={description}
           subDescription={subDescription}

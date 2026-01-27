@@ -8,6 +8,7 @@ const ProjectDetails = ({
   href,
   closeModal,
 }) => {
+  console.log(href);
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
       <motion.div
@@ -39,7 +40,12 @@ const ProjectDetails = ({
                 />
               ))}
             </div>
-            <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
+            >
               View Project{" "}
               <img src="assets/arrow-up.svg" className="size-4" href={href} />
             </a>
